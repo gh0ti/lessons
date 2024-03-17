@@ -1,4 +1,4 @@
-/* *,
+*,
 *::before,
 *::after{
     padding: 0;
@@ -62,4 +62,4 @@ input[type="email"],
 input[type="tel"],
 textarea {
     appearance: none;
-} */
+}
