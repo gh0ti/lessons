@@ -1,0 +1,73 @@
+@import url("reset.css");
+
+h1 {
+    color: red;
+}
+
+h2, h3 {
+    color: blueviolet;
+}
+
+.root-menu > li > a {
+    color: red;
+}
+
+.root-menu > li a + ul a {
+    color: brown;
+}
+
+.attributes-list h3 {
+    color: chocolate;
+}
+
+.country-name {
+    color: yellowgreen;
+}
+
+.term .country-name {
+    color:aquamarine
+}
+
+.term {
+    color: red;
+}
+
+.geography {
+    color: grey;
+}
+
+.geography p {
+    color: chartreuse;
+}
+
+.geography h2 + p {
+    color: blue;
+}
+
+#official-attributes {
+    color: cyan
+}
+
+div.short-description {
+    color: darkcyan;
+}
+
+.attribute-header ~ p {
+    color: darkgreen;
+}
+
+.attribute-header + p {
+    color: darkorange
+}
+
+.donates h3 {
+    color: brown;
+}
+
+.donates > h3 {
+    color: mediumspringgreen
+}
+
+.donates a {
+    color: red
+}
