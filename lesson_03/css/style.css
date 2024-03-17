@@ -71,3 +71,11 @@ div.short-description {
 .donates a {
     color: red
 }
+
+[class^="bio-"] p {
+    color: blueviolet;
+}
+
+.biosphere [class$="term"] {
+    color:cornflowerblue;
+}
