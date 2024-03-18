@@ -1,0 +1,87 @@
+@import url("fonts.css");
+
+@import url("reset.css");
+
+h1 {
+    color: rgb(196, 50, 50);
+    
+    font-family: "UNOVIS100", fantasy;
+    font-size: 32px;
+
+    text-align: center;
+    text-transform: lowercase;
+    /* example of composed `text-decoration` property */
+    text-decoration: underline brown;
+
+    letter-spacing: 5px;
+    
+    line-height: 2;
+}
+
+.gramdmas-smuzi {
+    font-family: "sans-serif";
+}
+
+.gramdmas-smuzi h2 {
+    color: rgba(11, 85, 221, 0.89);
+
+    font-family: "Jura";
+    font-size: 18px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: -1px;
+
+    /* example of `text-decoration` as separate properties for compatibility with Safari */
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: rgba(11, 85, 221, 0.3);
+}
+
+.gramdmas-smuzi .image-container {
+    text-align: center;
+}
+
+.page p {
+    text-align: justify;
+}
+
+a {
+    font-family: "Pacifico";
+}
+
+.term {
+    font-family: "desonanz";
+    text-shadow: -3px 0px 0px rgba(255, 0, 0, .3),
+        0px -3px 0px rgba(0, 255, 0, .3),
+        3px 0 0 rgba(0, 0, 255, .3);
+}
+
+.gramdmas-smuzi li {
+    font-family: "Jura";
+}
+
+.krovato {
+    color: #2b2929;
+    font-size: 16px;
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.krovato h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.krovato .how-to-choose-bed h2 {
+    text-align: center;
+}
+
+.krovato .sofa-types-header {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
