@@ -19,7 +19,7 @@ h1 {
 }
 
 .gramdmas-smuzi {
-    font-family: "sans-serif";
+    font-family: sans-serif;
 }
 
 .gramdmas-smuzi h2 {
@@ -64,9 +64,7 @@ a {
 
 .krovato {
     color: #2b2929;
-    font-size: 16px;
     font-family: "Proxima Nova", sans-serif;
-    font-weight: 400;
     line-height: 1.875;
 }
 
