@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300regular&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap);
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src: url('../fonts/krovato/proximanova_regular.woff2') format('wofff2'),
+        url('../fonts/krovato/proximanova_regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+    src: url('../fonts/krovato/proxima-nova-semi-bold.woff2') format('wofff2'),
+        url('../fonts/krovato/proxima-nova-semi-bold.woff') format('woff');
+}
