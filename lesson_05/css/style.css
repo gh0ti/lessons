@@ -79,12 +79,14 @@ h2 {
 .product-items .product-item {
     display: inline-block;
 
-    height: 224px;
+    height: 200px;
     width: 224px;
 
     overflow: hidden;
 
     padding: 0 12px;
+    /*margin: 0 12px;*/
+    /*margin-bottom: 24px;*/
 }
 
 .living-room-decoration .limiting-container {
@@ -146,7 +148,7 @@ h2 {
 
 .living-room-decoration .sofa-types-list li {
     margin-bottom: 10px;
-    margin-left: 47px;
+    padding-left: 47px;
 }
 
 .advantages {
