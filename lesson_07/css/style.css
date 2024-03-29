@@ -1,0 +1,355 @@
+@import url("fonts.css");
+
+@import url("reset.css");
+
+h1 {
+    padding: 15px;
+    margin-bottom: 15px;
+
+    background-color: #282828;
+
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    padding: 15px;
+
+    font-size: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navigation {
+    padding: 20px 0;
+
+    text-align: center;
+}
+
+[id^="tab"] {
+    display: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li::before {
+    display: inline-block;
+    padding: 0 10px;
+    color: #a9a9a9;
+    content: "|";
+}
+
+nav li:first-of-type::before {
+    display: none;
+    content: "";
+}
+
+.navigation a {
+    color: #0c0f8a;
+
+    font-weight: 700;
+}
+
+.navigation a:hover {
+    color: cyan;
+}
+
+.footer {
+    padding: 15px;
+
+    text-align: right;
+}
+
+
+/*region Tabs*/
+.header .navigation a[href="#tab-about-me"] {
+    background-color: red;
+}
+
+/* Додавати ID кожного таба окрім #tab-about-me, щоб при виборі іншого пункту меню меню "Головна" змінювало підсвітку */
+#tab-ready-to-consult:target ~ .header .navigation a[href="#tab-about-me"],
+#tab-krovato:target ~ .header .navigation a[href="#tab-about-me"] {
+    background-color: transparent;
+}
+
+#tab-ready-to-consult:target ~ .header .navigation a[href="#tab-ready-to-consult"] {
+    background-color: red;
+}
+
+#tab-krovato:target ~ .header .navigation a[href="#tab-krovato"] {
+    background-color: red;
+}
+
+#tab-ready-to-consult:target ~ .page .about-me,
+#tab-krovato:target ~ .page .about-me {
+    display: none;
+}
+
+#tab-ready-to-consult:not(:target) ~ .page .ready-to-consult {
+    display: none;
+}
+
+#tab-krovato:not(:target) ~ .page .krovato {
+    display: none;
+}
+/*endregion*/
+
+/*region About Me Section*/
+.about-me {
+    background-color: #000;
+
+    color: white;
+
+    font-family: "Exo", sans-serif;
+}
+
+.about-me .container {
+    padding-top: 120px;
+
+    max-width: 1512px;
+    min-height: 555px;
+    margin: 0 auto;
+
+    background: url("../img/about-section.png") center no-repeat;
+}
+
+/* Structure from the lesson */
+.portfolio-about-me > * {
+    margin-bottom: 150px;
+}
+
+.portfolio-about-me > *:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-about-me h3 {
+    margin-bottom: 20px;
+
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.16;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio-about-me h3::after {
+    display: block;
+
+    margin: 0 auto;
+    margin-top: 20px;
+
+    width: 30%;
+    height: 2px;
+
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,.6) 0%, rgba(255,145,0,.6) 14%, rgba(255,252,0,.6) 31%, rgba(82,255,0,.6) 48%, rgba(0,255,252,.6) 66%, rgba(0,5,255,.6) 83%, rgba(85,18,255,.6) 100%);
+
+    content: "";
+}
+
+.portfolio-about-me h3:hover::after {
+    width: 50%;
+}
+
+.portfolio-about-me .description {
+    margin: 0 auto 60px;
+    max-width: 992px;
+
+    font-size: 18px;
+    line-height: 40px;
+
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+}
+
+.portfolio-about-me .skills {
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.portfolio-about-me .skills li {
+    display: inline-block;
+}
+
+.portfolio-about-me .skills li::after {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 60px;
+
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,145,0,1) 14%, rgba(255,252,0,1) 31%, rgba(82,255,0,1) 48%, rgba(0,255,252,1) 66%, rgba(0,5,255,1) 83%, rgba(85,18,255,1) 100%);
+    border-radius: 50%;
+
+    content: "";
+}
+/*endregion*/
+
+/*region Ready To Consult section */
+.portfolio-ready-to-consult {
+    background-color: #000001;
+
+    color: #FFF;
+
+    font-family: "Exo", sans-serif;
+}
+
+.portfolio-ready-to-consult .contact-info {
+    padding: 80px 0;
+
+    text-align: center;
+}
+
+.portfolio-ready-to-consult .contact-info li {
+    display: inline-block;
+
+    margin-left: 83px;
+}
+
+.portfolio-ready-to-consult .contact-info li:hover {
+    text-shadow: 0 0 10px rgba(206,206,206,0.83);
+}
+
+.portfolio-ready-to-consult .contact-info li:first-child {
+    margin-left: 0;
+}
+
+.portfolio-ready-to-consult .contact-info li:hover::before {
+}
+
+.portfolio-ready-to-consult .contact-info a:hover {
+    color: #b36ada;
+}
+
+.portfolio-ready-to-consult .contact-info a::before {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+
+    vertical-align: text-top;
+
+    margin-right: 20px;
+
+    content: "";
+}
+
+.portfolio-ready-to-consult .contact-info a:hover::before {
+    opacity: .8;
+}
+
+.portfolio-ready-to-consult .contact-info li.phone a::before {
+    background: url("../img/icon_phone.png") 0 center no-repeat;
+}
+
+.portfolio-ready-to-consult .contact-info li.address a {
+    text-transform: capitalize;
+}
+
+.portfolio-ready-to-consult .contact-info li.address a::before {
+    background: url("../img/icon_geo.png") 0 center no-repeat;
+}
+
+.portfolio-ready-to-consult .contact-info li.email a::before {
+    background: url("../img/icon_mail.png") 0 center no-repeat;
+}
+/*endregion*/
+
+/*region Krovato section */
+.living-room-decoration .container {
+    margin: 0 auto;
+    max-width: 1070px;
+
+    padding: 40px 0;
+}
+
+.living-room-decoration {
+    background-color: #F8F8F8;
+
+    font-family: "Proxima Nova", sans-serif;
+
+    line-height: 1.875;
+}
+
+.living-room-decoration h3 {
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 40px;
+
+    line-height: 1.2;
+}
+
+.living-room-decoration {
+    margin-bottom: 20px;
+}
+
+.living-room-decoration .article-main-image {
+    margin-bottom: 40px;
+
+    border-radius: 8px;
+}
+
+.living-room-decoration .description {
+    margin-bottom: 40px;
+}
+
+.living-room-decoration .description p {
+    margin-bottom: 10px;
+
+    line-height: 30px;
+}
+
+.living-room-decoration .sofa-types-header {
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.living-room-decoration .sofa-types-list {
+    margin-bottom: 40px;
+}
+
+.living-room-decoration .sofa-types-list li {
+    margin-bottom: 10px;
+    padding-left: 47px;
+}
+
+.living-room-decoration .sofa-types-list li:last-child {
+    margin-bottom: 0;
+}
+
+.living-room-decoration .sofa-types-list li::before {
+    display: inline-block;
+    height: 28px;
+    width: 47px;
+
+    margin-left: -47px;
+
+    vertical-align: top;
+
+    background-image: url("../img/sofa_types_marker.png");
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-size: 28px;
+
+    content: "";
+}
+/*endregion*/
