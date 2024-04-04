@@ -27,7 +27,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.navigation {
+.main-navigation {
     padding: 20px 0;
 
     text-align: center;
@@ -53,13 +53,13 @@ nav li:first-of-type::before {
     content: "";
 }
 
-.navigation a {
+.main-navigation a {
     color: #0c0f8a;
 
     font-weight: 700;
 }
 
-.navigation a:hover {
+.main-navigation a:hover {
     color: cyan;
 }
 
@@ -71,21 +71,21 @@ nav li:first-of-type::before {
 
 
 /*region Tabs*/
-.header .navigation a[href="#tab-about-me"] {
+.header .main-navigation a[href="#tab-about-me"] {
     background-color: red;
 }
 
 /* Додавати ID кожного таба окрім #tab-about-me, щоб при виборі іншого пункту меню меню "Головна" змінювало підсвітку */
-#tab-ready-to-consult:target ~ .header .navigation a[href="#tab-about-me"],
-#tab-krovato:target ~ .header .navigation a[href="#tab-about-me"] {
+#tab-ready-to-consult:target ~ .header .main-navigation a[href="#tab-about-me"],
+#tab-krovato:target ~ .header .main-navigation a[href="#tab-about-me"] {
     background-color: transparent;
 }
 
-#tab-ready-to-consult:target ~ .header .navigation a[href="#tab-ready-to-consult"] {
+#tab-ready-to-consult:target ~ .header .main-navigation a[href="#tab-ready-to-consult"] {
     background-color: red;
 }
 
-#tab-krovato:target ~ .header .navigation a[href="#tab-krovato"] {
+#tab-krovato:target ~ .header .main-navigation a[href="#tab-krovato"] {
     background-color: red;
 }
 
