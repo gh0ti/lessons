@@ -1,0 +1,78 @@
+@import "reset.css";
+
+@import "fonts.css";
+
+body {
+    background-color: #F8F8F8;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+.products {
+    padding: 30px;
+}
+
+.card-product {
+    display: inline-block;
+    height: 300px;
+    width: 250px;
+
+    border-radius: 8px;
+
+    background: #fff url("../img/products/product_background.svg") no-repeat bottom center;
+
+    position: relative;
+}
+
+.card-product--shadow {
+    box-shadow: 10px 10px 35px -14px rgba(0,0,0,0.2);
+}
+
+.card-product__title, .card-product__count {
+    font-size: 20px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+
+}
+
+.card-product__title, .card-product__count {
+    position: absolute;
+}
+
+.card-product__title:hover {
+    color: #FFBC57;
+}
+
+.card-product__title {
+    top: 20px;
+    left: 20px;
+}
+
+.card-product__count {
+    top: 20px;
+    right: 20px;
+
+    color: #B1B1B1;
+}
+
+.card-product__image {
+    max-height: 100%;
+}
+
+.card-product__link {
+    height: 50px;
+    width: 50px;
+
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    background: url("../img/icons/arrow.svg") center no-repeat;
+}
+
+.card-product__link:hover {
+    transform: rotate(45deg);
+}
