@@ -92,8 +92,10 @@ body {
     font-size: 20px;
 
     border-right: 5px solid #FFBC57;
+}
 
-    line-height: 40px;
+.menu-site__image-link {
+    vertical-align: middle;
 }
 
 .menu-site__link:hover {
