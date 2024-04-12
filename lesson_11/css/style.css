@@ -1,0 +1,167 @@
+@import "reset.css";
+
+@import "fonts.css";
+
+body {
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+h1 {
+    padding: 15px 30px;
+
+    font-size: 32px;
+
+    text-transform: uppercase;
+}
+
+.image-wrapper {
+    height: 350px;
+}
+
+.image-wrapper img {
+    height: 100%;
+}
+
+.car-wrapper {
+    height: 400px;
+
+    position: relative;
+
+    background-color: #BBB;
+}
+
+/*region Wheels */
+.wheel, .wheel * {
+    border-radius: 50%;
+}
+
+.wheel {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    background-color: #333;
+}
+
+.wheel__layer-1 {
+    height: 110px;
+    width: 110px;
+
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    background-color: #111;
+}
+
+.wheel__layer-2 {
+    height: 80px;
+    width: 80px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+.wheel__layer-3 {
+    height: 76px;
+    width: 76px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #555;
+}
+
+.wheel__layer-4 {
+    height: 65px;
+    width: 65px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #444;
+}
+
+.wheel__sector {
+    position: absolute;
+
+    left: 3px;
+    top: 26.5px;
+
+    transform-origin: 29.5px center;
+
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-bottom-width: 6px;
+    border-top-width: 6px;
+    border-left: 16px solid black;
+    border-radius: 7px;
+}
+
+.wheel__sector:nth-child(2) {
+    transform: rotate(36deg);
+}
+.wheel__sector:nth-child(3) {
+    transform: rotate(72deg);
+}
+.wheel__sector:nth-child(4) {
+    transform: rotate(108deg);
+}
+.wheel__sector:nth-child(5) {
+    transform: rotate(144deg);
+}
+.wheel__sector:nth-child(6) {
+    transform: rotate(180deg);
+}
+.wheel__sector:nth-child(7) {
+    transform: rotate(216deg);
+}
+.wheel__sector:nth-child(8) {
+    transform: rotate(252deg);
+}
+.wheel__sector:nth-child(9) {
+    transform: rotate(288deg);
+}
+.wheel__sector:nth-child(10) {
+    transform: rotate(324deg);
+}
+
+.wheel__layer-5 {
+    height: 15px;
+    width: 15px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #777;
+}
+
+.wheel.wheel--front {
+    top: 260px;
+    left: 150px;
+}
+
+.wheel.wheel--back {
+    top: 260px;
+    left: 650px;
+    transform: rotateY(180deg);
+}
+/*endregion*/
+
+
+
+
+
+
+
+
+/*transform:matrix(0.91,0.37,-1.07,0.33,35,-16);*/
