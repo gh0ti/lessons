@@ -15,3 +15,30 @@
     src: url("../fonts/Satoshi-Bold.woff2") format('woff2'),
     url("../fonts/Satoshi-Bold.woff") format('woff');
 }
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/proximanova_regular.woff2') format('wofff2'),
+    url('../fonts/proximanova_regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/proxima-nova-semi-bold.woff2') format('wofff2'),
+    url('../fonts/proxima-nova-semi-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/proxima-nova-light.woff2') format('wofff2'),
+    url('../fonts/proxima-nova-light.woff') format('woff');
+}
