@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+input,
+bottom,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  appearance: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+}
+
+[class*=__container] {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  background-color: #000;
+  color: #fff;
+}
+.header__title {
+  font-family: "Exo 2", sans-serif;
+  font-size: 30px;
+}
+.header .nav {
+  display: flex;
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.header .nav__menu {
+  display: flex;
+  gap: 60px;
+}
+.header .nav__item-menu {
+  padding: 10px;
+}
+.header .nav_social {
+  display: flex;
+  gap: 19px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.header .nav__item-social {
+  height: 20px;
+  width: 20px;
+  border: 1px solid white;
+}
+.header .nav__item-social--facebook {
+  background: url("../img/icons/facebook.svg") no-repeat center center;
+}
+.header .nav__item-social--linkedin {
+  background: url("../img/icons/linkedin.svg") no-repeat center center;
+}
+.header .nav__item-social--youtube {
+  background: url("../img/icons/youtube.svg") no-repeat center center;
+}
+/*# sourceMappingURL=style.css.map */

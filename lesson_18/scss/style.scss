@@ -1,0 +1,72 @@
+@import "reset";
+
+@import "fonts";
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+[class*=__container] {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 70px;
+    padding-bottom: 60px;
+
+    background-color: #000;
+
+    color: #fff;
+
+    &__title {
+        font-family: "Exo 2", sans-serif;
+        font-size: 30px;
+    }
+
+    .nav {
+        display: flex;
+
+        font-family: "Orbitron", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+
+        &__menu {
+            display: flex;
+            gap: 60px
+        }
+
+        &__item-menu {
+            padding: 10px;
+        }
+
+        &_social {
+            display: flex;
+            gap: 19px;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        &__item-social {
+            height: 20px;
+            width: 20px;
+            border: 1px solid white;
+
+            &--facebook {
+                background: url("../img/icons/facebook.svg") no-repeat center center;
+            }
+            &--linkedin {
+                background: url("../img/icons/linkedin.svg") no-repeat center center;
+            }
+            &--youtube {
+                background: url("../img/icons/youtube.svg") no-repeat center center;
+            }
+        }
+    }
+}
