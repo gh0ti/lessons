@@ -87,17 +87,20 @@ textarea {
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 70px;
-  padding-bottom: 60px;
   background-color: #000;
   color: #fff;
+}
+.header__container {
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  align-items: center;
+  justify-content: space-between;
 }
 .header__title {
   font-family: "Exo 2", sans-serif;
   font-size: 30px;
+  letter-spacing: -0.1em;
 }
 .header .nav {
   display: flex;
@@ -107,29 +110,19 @@ textarea {
 }
 .header .nav__menu {
   display: flex;
-  gap: 60px;
+  gap: 80px;
 }
 .header .nav__item-menu {
-  padding: 10px;
+  text-transform: uppercase;
 }
-.header .nav_social {
+.header .nav__social {
   display: flex;
   gap: 19px;
   align-items: center;
   flex-wrap: nowrap;
 }
-.header .nav__item-social {
+.header .nav__image-social {
   height: 20px;
   width: 20px;
-  border: 1px solid white;
-}
-.header .nav__item-social--facebook {
-  background: url("../img/icons/facebook.svg") no-repeat center center;
-}
-.header .nav__item-social--linkedin {
-  background: url("../img/icons/linkedin.svg") no-repeat center center;
-}
-.header .nav__item-social--youtube {
-  background: url("../img/icons/youtube.svg") no-repeat center center;
 }
 /*# sourceMappingURL=style.css.map */
