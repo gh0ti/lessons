@@ -2,6 +2,16 @@
 
 @import "fonts";
 
+
+
+body {
+    background-color: #000;
+
+    font-family: "Exo", sans-serif;
+
+    color: #fff;
+}
+
 .wrapper {
     min-height: 100%;
     overflow: clip;
@@ -14,3 +24,5 @@
 }
 
 @import "header";
+
+@import "main";

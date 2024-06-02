@@ -1,44 +1,169 @@
+@import "mixins";
+
+// adaptive properties
+$minWidth: 400;
+$maxWidth: 1920;
+$maxWidthContainer: 1300;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// breakpoints
+$burgerBreakpoint: 829px;
+
 .header {
-    background-color: #000;
-    color: #fff;
-
     &__container {
-        display: flex;
+        @include adaptiveValue('padding-top', 70, 50, 0, $containerWidth, 605);
+        @include adaptiveValue('padding-bottom', 40, 17, 0, $containerWidth, 605);
 
-        padding-top: 70px;
-        padding-bottom: 60px;
+        display: flex;
+        @include adaptiveValue('gap', 110, 20, 0, $containerWidth, 874);
+
+        position: relative;
 
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: $burgerBreakpoint) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        //flex-grow: 1;
+        //width: 100%;
     }
 
     &__title {
+        white-space: nowrap;
+
         font-family: "Exo 2", sans-serif;
+        @include adaptiveValue('font-size', 30, 16);
         font-size: 30px;
         letter-spacing: -.1em;
+    }
+
+    &__burger {
+        display: none;
+
+        height: 2px;
+        width: 22px;
+
+        position: relative;
+
+        background-color: #fff;
+
+        @media (max-width: $burgerBreakpoint) {
+            display: block;
+        }
+
+        &::before, &::after {
+            height: 2px;
+            width: 100%;
+
+            position: absolute;
+
+            background-color: #fff;
+
+            content: "";
+        }
+        &::before {
+            top: -8px;
+        }
+        &::after {
+            bottom: -8px;
+        }
     }
 
     .nav {
         display: flex;
 
+        flex-grow: 1;
+
+        @include adaptiveValue('gap', 110, 20, 0, $containerWidth, 874);
+
+        align-items: center;
+        justify-content: space-between;
+
         font-family: "Orbitron", sans-serif;
-        font-size: 16px;
+        @include adaptiveValue('font-size', 16, 12);
         font-weight: 700;
+
+        @media (max-width: $burgerBreakpoint) {
+            //display: none;
+            //height: 300px;
+            //height: 100%;
+            //overflow: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            flex-grow: 0;
+
+            gap: 20px;
+
+            //position: absolute;
+            //top: 100%;
+
+            border: 1px solid white;
+
+            background-color: #555;
+        }
 
         &__menu {
             display: flex;
-            gap: 80px
+
+            gap: 20px;
+            //row-gap: 10px;
+            flex-wrap: wrap;
+            flex-grow: 1;
+
+            justify-content: space-between;
+
+            @media (max-width: $burgerBreakpoint) {
+                flex-direction: column;
+                align-items: center;
+                //flex-grow: 0;
+                justify-content: start;
+
+            }
         }
 
         &__item-menu {
+            position: relative;
             text-transform: uppercase;
+            &::after {
+                height: 2px;
+                width: 0;
+
+                position: absolute;
+                top: 100%;
+                left: 0;
+                //width: 100%;
+
+                background-color: #fff;
+
+                content: '';
+
+                transition: width .2s ease-in;
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
         }
 
         &__social {
+
             display: flex;
             gap: 19px;
             align-items: center;
-            flex-wrap: nowrap;
         }
 
         &__item-social {
