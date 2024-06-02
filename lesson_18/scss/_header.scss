@@ -1,13 +1,16 @@
 @import "mixins";
 
-// adaptive properties
+// responsive properties
 $minWidth: 400;
 $maxWidth: 1920;
 $maxWidthContainer: 1300;
 $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
-// breakpoints
+// site variables
+
+
+// adaptive breakpoints
 $burgerBreakpoint: 829px;
 
 .header {
@@ -25,7 +28,7 @@ $burgerBreakpoint: 829px;
 
         @media (max-width: $burgerBreakpoint) {
             flex-direction: column;
-            align-items: start;
+            align-items: end;
         }
     }
 
@@ -33,8 +36,10 @@ $burgerBreakpoint: 829px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        //flex-grow: 1;
-        //width: 100%;
+
+        @media (max-width: $burgerBreakpoint) {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -55,6 +60,8 @@ $burgerBreakpoint: 829px;
         position: relative;
 
         background-color: #fff;
+
+        z-index: 3;
 
         @media (max-width: $burgerBreakpoint) {
             display: block;
@@ -93,24 +100,50 @@ $burgerBreakpoint: 829px;
         font-weight: 700;
 
         @media (max-width: $burgerBreakpoint) {
-            //display: none;
-            //height: 300px;
-            //height: 100%;
-            //overflow: auto;
+            padding: 90px 20px 20px;
 
             display: flex;
             flex-direction: column;
             justify-content: start;
+            align-items: end;
             flex-grow: 0;
 
             gap: 20px;
 
-            //position: absolute;
-            //top: 100%;
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            //right: 0;
+            left: 100%;
 
-            border: 1px solid white;
 
-            background-color: #555;
+            height: 100%;
+            width: 100%;
+
+            background-color: #000;
+
+            transition: left .3s ease-in-out;
+
+            &.active {
+                left: 0;
+            }
+
+            &::before {
+                min-height: 80px;
+                width: 100%;
+
+                display: block;
+
+                position: fixed;
+                top: 0;
+
+                background-color: #000;
+
+                z-index: 2;
+
+                content: "";
+            }
+
         }
 
         &__menu {
@@ -120,6 +153,7 @@ $burgerBreakpoint: 829px;
             //row-gap: 10px;
             flex-wrap: wrap;
             flex-grow: 1;
+            //align-self: end;
 
             justify-content: space-between;
 

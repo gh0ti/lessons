@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/dynamic_adapt.js" defer></script>
     <title>Lesson 18</title>
 </head>
 <body>
@@ -23,7 +25,7 @@
                     <li class="nav__item-menu"><a href="#" class="nav__item-link">Testimonials</a></li>
                     <li class="nav__item-menu"><a href="#" class="nav__item-link">Contact</a></li>
                 </ul>
-                <ul class="nav__social">
+                <ul class="nav__social" data-da=".home__description, 991.98">
                     <li class="nav__item-social">
                         <a href="#" class="nav__link-social">
                             <img src="./img/icons/youtube.svg" alt="Youtube" class="nav__image-social">
@@ -44,11 +46,13 @@
         </div>
     </header>
     <main class="main">
-        <div class="main__container">
-            <h1 class="main__title">Jimmy Turner</h1>
-            <h2 class="main__subtitle">Professional video editor</h2>
-            <div class="main__description">Making your videos look more cool.</div>
-            <a href="#" class="button button">Lets Talk</a>
+        <div class="home">
+            <div class="home__container">
+                <h1 class="home__title">Jimmy Turner</h1>
+                <h2 class="home__subtitle">Professional video editor</h2>
+                <div class="home__description">Making your videos look more cool.</div>
+                <a href="#" class="button button">Lets Talk</a>
+            </div>
         </div>
     </main>
 </div>

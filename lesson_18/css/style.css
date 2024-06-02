@@ -167,13 +167,18 @@ body {
 @media (max-width: 829px) {
   .header__container {
     flex-direction: column;
-    align-items: start;
+    align-items: end;
   }
 }
 .header__title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 829px) {
+  .header__title-container {
+    width: 100%;
+  }
 }
 .header__title {
   white-space: nowrap;
@@ -209,6 +214,7 @@ body {
   width: 22px;
   position: relative;
   background-color: #fff;
+  z-index: 3;
 }
 @media (max-width: 829px) {
   .header__burger {
@@ -282,13 +288,34 @@ body {
 }
 @media (max-width: 829px) {
   .header .nav {
+    padding: 90px 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    align-items: end;
     flex-grow: 0;
     gap: 20px;
-    border: 1px solid white;
-    background-color: #555;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    transition: left 0.3s ease-in-out;
+  }
+  .header .nav.active {
+    left: 0;
+  }
+  .header .nav::before {
+    min-height: 80px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    z-index: 2;
+    content: "";
   }
 }
 .header .nav__menu {
@@ -332,5 +359,13 @@ body {
 .header .nav__image-social {
   height: 20px;
   width: 20px;
+}
+
+.home {
+  overflow: hidden;
+}
+.home__container {
+  padding-top: 120px;
+  padding-bottom: 160px;
 }
 /*# sourceMappingURL=style.css.map */
