@@ -1,0 +1,23 @@
+.adaptive-container {
+    text-align: center;
+
+    &__photo-container {
+        background: url("../img/background/ellipse_ul.png") 0 0 / 40% no-repeat,
+        url("../img/background/ellipse_br.png") 100% 100% / 40% no-repeat;
+
+        .home__photo {
+            max-height: 300px;
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 376 / 508;
+            object-fit: contain;
+        }
+    }
+
+    .about__skills {
+        margin-bottom: 40px;
+    }
+
+
+
+}

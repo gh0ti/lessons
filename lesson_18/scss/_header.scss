@@ -1,18 +1,5 @@
 @import "mixins";
 
-// responsive properties
-$minWidth: 400;
-$maxWidth: 1920;
-$maxWidthContainer: 1300;
-$containerPadding: 30;
-$containerWidth: $maxWidthContainer + $containerPadding;
-
-// site variables
-
-
-// adaptive breakpoints
-$burgerBreakpoint: 829px;
-
 .header {
     &__container {
         @include adaptiveValue('padding-top', 70, 50, 0, $containerWidth, 605);

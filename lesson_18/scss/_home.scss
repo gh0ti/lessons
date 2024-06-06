@@ -1,9 +1,104 @@
+@import "mixins";
+
+$homeBreakpoint: 1000px;
+
 .home {
     overflow: hidden;
+    background: url("../img/background/ellipse_ul.png") 0 0 no-repeat,
+    url("../img/background/ellipse_br.png") 100% 100% no-repeat;
+
+    @media (max-width: $homeBreakpoint) {
+        background: url("../img/background/home_background_small.png") center right / 30% no-repeat;
+    }
 
     &__container {
-        padding-top: 120px;
-        padding-bottom: 160px;
+        @include adaptiveValue('padding-top', 120, 21);
+        @include adaptiveValue('padding-bottom', 120, 40);
 
+        position: relative;
+
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        // спочатку був такий варіант реалізації відступу між підкреслюванням та елементом.
+        //display: flex;
+        //flex-direction: column;
+        //gap: 10px;
+        // потім я реалізував відступ через `margin-top` для псевдоелемента `::after`.
+        // не впевнений, що допускається використання `margin-top` в такому випадку,
+        // але мені це здалось кращим за flex+column+gap
+
+        @include adaptiveValue('font-size', 18, 14);
+        letter-spacing: -.02em;
+        line-height: 20px;
+
+        text-transform: uppercase;
+
+        @include rainbowUnderline(1px, 10px);
+
+    }
+
+    &__subtitle {
+        max-width: toEm(600, 80);
+
+        @include adaptiveValue('font-size', 80, 32);
+        font-weight: 700;
+        line-height: toEm(70, 80);
+
+        text-transform: uppercase;
+    }
+
+    &__description {
+        @include adaptiveValue('font-size', 18, 14);
+        @include adaptiveValue('line-height', 40, 15);
+        letter-spacing: -.02em;
+    }
+
+    .button {
+        @include adaptiveValue('padding-top', 15, 8);
+        @include adaptiveValue('padding-bottom', 15, 8);
+        @include adaptiveValue('padding-left', 60, 40);
+        @include adaptiveValue('padding-right', 60, 40);
+
+        background-color: #6f00a9;
+
+        font-family: "Orbitron", sans-serif;
+        @include adaptiveValue('font-size', 20, 14);
+
+        text-transform: uppercase;
+    }
+
+    &__container-photo {
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__container-photo &__photo {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 80%;
+        transform: translateX(-50%);
+
+        @media (max-width: $homeBreakpoint) {
+            display: none;
+
+        }
+    }
+
+    &__background-photo {
+        position: relative;
+        height: 80%;
+        @include adaptiveValue('bottom', -120, -40);
+
+        @media (max-width: $homeBreakpoint) {
+            display: none;
+        }
     }
 }

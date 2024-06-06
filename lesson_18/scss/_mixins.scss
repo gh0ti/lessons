@@ -75,3 +75,23 @@
         }
     }
 }
+
+@mixin rainbowUnderline($height: 1px, $beforeMargin: 0, $width: calc(100% + 2em), $shift: 0) {
+    &::after {
+        display: block;
+        margin-top: $beforeMargin;
+
+        position: relative;
+        left: $shift;
+
+        height: $height;
+        width: $width;
+
+        background: #000;
+        background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 49%, rgba(36,0,255,.7) 100%);
+
+        opacity: 50%;
+
+        content: "";
+    }
+}
