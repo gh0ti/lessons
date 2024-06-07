@@ -2,6 +2,8 @@
 
 @import "fonts";
 
+@import "mixins";
+
 // responsive properties
 $minWidth: 400;
 $maxWidth: 1920;
@@ -13,9 +15,12 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 
 // adaptive breakpoints
-$burgerBreakpoint: 829px;
+$burgerBreakpoint: 885px;
 
 body {
+    //padding-top: 50px;
+    position: relative;
+
     background-color: #000;
 
     font-family: "Exo", sans-serif;
@@ -31,7 +36,7 @@ body {
 [class*=__container] {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 0 15px;
 }
 
 @import "header";
@@ -41,3 +46,9 @@ body {
 @import "adaptive_container";
 
 @import "about";
+
+.header, .home, .adaptive-container, .about {
+    //display: none;
+}
+
+@import "portfolio";

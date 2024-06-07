@@ -1,6 +1,6 @@
 @import "mixins";
 
-$homeBreakpoint: 1000px;
+$homeBreakpoint: 991px;
 
 .home {
     overflow: hidden;
@@ -70,6 +70,12 @@ $homeBreakpoint: 1000px;
         @include adaptiveValue('font-size', 20, 14);
 
         text-transform: uppercase;
+
+        transition: background-color .3s ease-in-out;
+
+        &:hover {
+            background-color: #0B0045;
+        }
     }
 
     &__container-photo {
