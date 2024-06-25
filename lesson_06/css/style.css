@@ -16,7 +16,7 @@ h1 {
 
 /*Lesson task:*/
 h2 {
-    margin: 25px 0;
+    padding: 25px 0;
 
     color: #c4125f;
 
@@ -37,6 +37,8 @@ h2 {
 }
 
 .living-room-decoration {
+    padding-top: 20px;
+
     background-color: #F8F8F8;
 
     font-family: "Proxima Nova", sans-serif;
@@ -45,7 +47,7 @@ h2 {
 }
 
 .living-room-decoration h3 {
-    margin: 40px 0;
+    margin-bottom: 40px;
 
     text-align: center;
 
@@ -92,6 +94,7 @@ h2 {
     background-image: url("../img/sofa_types_marker.png");
     background-repeat: no-repeat;
     background-position-x: 0;
+    background-size: 28px;
 }
 /*endregion*/
 
@@ -111,7 +114,7 @@ h2 {
 .coral .content {
     display: inline-block;
     max-width: 770px;
-    padding-top: 74px;
+    padding-top: 55px;
 }
 
 .coral .content .title {
@@ -119,7 +122,6 @@ h2 {
 
     font-size: 74px;
     font-weight: 300;
-    line-height: 55px;
 }
 
 .coral .content .description {
