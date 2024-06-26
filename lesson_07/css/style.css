@@ -185,11 +185,15 @@ nav li:first-of-type::before {
     display: inline-block;
 }
 
+.portfolio-about-me .skills li:not(:last-child) {
+    margin-right: 60px;
+}
+
 .portfolio-about-me .skills li::after {
     display: inline-block;
     height: 10px;
     width: 10px;
-    margin: 0 60px;
+    margin-left: 60px;
 
     background: rgb(255,0,0);
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,145,0,1) 14%, rgba(255,252,0,1) 31%, rgba(82,255,0,1) 48%, rgba(0,255,252,1) 66%, rgba(0,5,255,1) 83%, rgba(85,18,255,1) 100%);
@@ -309,7 +313,7 @@ nav li:first-of-type::before {
     margin-bottom: 40px;
 }
 
-.living-room-decoration .description p {
+.living-room-decoration .description p:not(:last-child) {
     margin-bottom: 10px;
 
     line-height: 30px;
