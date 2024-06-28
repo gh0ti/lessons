@@ -57,6 +57,8 @@
         @include adaptiveValue('line-height', 25, 15);
 
         text-transform: capitalize;
+
+        overflow: auto;
     }
 
     &__item-skill {

@@ -988,6 +988,7 @@ body {
   font-family: "Orbitron", sans-serif;
   font-weight: 500;
   text-transform: capitalize;
+  overflow: auto;
 }
 @media (min-width: 83.125em) {
   .about__skills {
