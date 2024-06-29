@@ -3,3 +3,17 @@
 @import "fonts";
 
 @import "mixins";
+@import "variables";
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+[class*=__container] {
+    max-width: $pageWidth + px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@import "header";

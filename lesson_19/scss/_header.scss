@@ -1,0 +1,42 @@
+@import "common_elements/logo";
+
+.header {
+    font-family: "Roboto", sans-serif;
+
+    &__container {
+    }
+
+    &__main {
+        display: flex;
+
+        align-items: center;
+    }
+
+    &__button-search {
+    }
+
+    &__logo {
+    }
+
+    &__links {
+
+    }
+
+    &__link {
+        &--account {
+        }
+    }
+}
+
+.logo {
+    &__img {
+    }
+}
+
+.nav {
+    &__list {
+    }
+
+    &__item {
+    }
+}
