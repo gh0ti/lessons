@@ -128,7 +128,7 @@ body {
   height: 28px;
 }
 .logo::before, .logo::after {
-  display: block;
+  display: inline-block;
   height: 15px;
   width: 31px;
   background: url("../../img/logo/logo_wrapper.svg") center/cover no-repeat;
@@ -145,19 +145,20 @@ body {
 .header__main {
   padding: 31px 0 55px;
   display: flex;
-  column-gap: 20px;
-  row-gap: 5px;
+  gap: 5px 20px;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 800px) {
   .header__main {
     padding-top: calc(31px - 21 * (800px - 100vw) / 300);
+    padding-bottom: calc(55px - 40 * (800px - 100vw) / 300);
   }
 }
 @media (max-width: 500px) {
   .header__main {
     padding-top: 10px;
+    padding-bottom: 15px;
   }
 }
 @media (max-width: 335px) {
@@ -173,7 +174,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
+  justify-content: center;
 }
 @media (max-width: 335px) {
   .header__logo {
@@ -214,5 +215,26 @@ body {
 .logo__img {
   height: 23px;
   width: 97px;
+}
+
+.nav {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+@media (max-width: 1190px) {
+  .nav {
+    font-size: calc(16px - 4 * (1190px - 100vw) / 490);
+  }
+}
+@media (max-width: 700px) {
+  .nav {
+    font-size: 12px;
+  }
+}
+.nav__list {
+  display: flex;
+  gap: 10px 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 /*# sourceMappingURL=style.css.map */

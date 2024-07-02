@@ -8,7 +8,7 @@
     height: 28px;
 
     &::before, &::after {
-        display: block;
+        display: inline-block;
 
         height: 15px;
         width: 31px;
