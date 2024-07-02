@@ -1,35 +1,101 @@
 @import "common_elements/logo";
+@import "variables";
 
 .header {
     font-family: "Roboto", sans-serif;
+    font-size: 18px;
 
     &__container {
+        position: relative;
     }
 
     &__main {
-        display: flex;
+        padding: 31px 0 55px;
 
+        display: flex;
+        column-gap: 20px;
+        row-gap: 5px;
+
+        justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 800px){
+            padding-top: calc(31px - 21 * ((800px - 100vw) / 300));
+        }
+        @media (max-width: 500px) {
+            padding-top: 10px;
+        }
+        @media (max-width: 335px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__button-search {
+        &--search-icon {
+            &::before {
+                font-size: 25px;
+                content: "\e901";
+            }
+        }
     }
 
     &__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        text-align: center;
+
+        @media (max-width: 335px) {
+            position: static;
+            transform: unset;
+
+            order: -1;
+            flex: 1 1 100%;
+        }
     }
 
     &__links {
-
+        display: flex;
+        column-gap: 22px;
+        //flex-wrap: wrap;
+        @media (max-width: 680px) {
+            column-gap: 5px;
+        }
     }
 
     &__link {
-        &--account {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__text-link {
+        @media (max-width: 680px) {
+            display: none;
+        }
+    }
+
+    &__image-link {
+        &--account-icon {
+            &::before {
+                font-size: 25px;
+                content: "\e900";
+            }
+        }
+        &--shopping-icon {
+            &::before {
+                font-size: 25px;
+                content: "\e903";
+            }
         }
     }
 }
 
 .logo {
     &__img {
+        height: 23px;
+        width: 97px;
     }
 }
 

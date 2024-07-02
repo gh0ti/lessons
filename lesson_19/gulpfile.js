@@ -17,7 +17,7 @@ gulp.task('server', () => {
 });
 
 gulp.task('styles', () => {
-    return gulp.src('./scss/*.scss')
+    return gulp.src('./scss/**/*.scss')
         .pipe(sourceMaps.init())
         .pipe(sass({}, true).on('error', sass.logError))
         .pipe(sourceMaps.write('.'))
@@ -26,7 +26,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('./scss/*.scss', gulp.parallel('styles'));
+    gulp.watch('./scss/**/*.scss', gulp.parallel('styles'));
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
