@@ -1,0 +1,67 @@
+@import "../variables";
+
+.burger {
+    display: none;
+
+    height: 18px;
+    width: 18px;
+
+    position: relative;
+
+    background-color: transparent;
+
+    z-index: 3;
+
+    @media (max-width: $burgerBreakpoint+px) {
+        display: block;
+    }
+
+    &::before, &::after {
+        height: 2px;
+        width: 100%;
+
+        position: absolute;
+
+        background-color: $dark;
+        left: 0;
+
+        content: "";
+
+        transition: all .2s ease-in;
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+
+    & span {
+        height: 2px;
+        width: 100%;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        background-color: $dark;
+
+        transform: translate(0px, -50%);
+    }
+    //
+    //&.active {
+    //    & span {
+    //        display: none;
+    //    }
+    //
+    //    &::before {
+    //        top: 50%;
+    //        transform: translateY(-1px) rotate(45deg);
+    //
+    //    }
+    //    &::after {
+    //        top: 50%;
+    //        transform: translateY(-1px) rotate(-45deg);
+    //    }
+    //}
+}

@@ -1,5 +1,6 @@
 @import "common_elements/logo";
 @import "variables";
+@import "common_elements/burger";
 
 .header {
     font-family: "Roboto", sans-serif;
@@ -26,7 +27,7 @@
             padding-top: 10px;
             padding-bottom: 15px;
         }
-        @media (max-width: 335px) {
+        @media (max-width: $headerTransformBreakpoint+px) {
             flex-wrap: wrap;
         }
     }
@@ -47,7 +48,7 @@
 
         justify-content: center;
 
-        @media (max-width: 335px) {
+        @media (max-width: $headerTransformBreakpoint+px) {
             position: static;
             transform: unset;
 
@@ -61,6 +62,9 @@
         column-gap: 22px;
         @media (max-width: 680px) {
             column-gap: 5px;
+        }
+        @media (max-width: $burgerBreakpoint+px) {
+            display: none;
         }
     }
 
@@ -109,6 +113,10 @@
 
     @media (max-width: 700px) {
         font-size: 12px;
+    }
+
+    @media (max-width: $burgerBreakpoint+'px') {
+        display: none;
     }
 
     &__list {
