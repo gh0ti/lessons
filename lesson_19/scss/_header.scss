@@ -8,13 +8,20 @@
 
     &__container {
         position: relative;
+
+        @media (max-width: 300px) {
+            padding-inline: calc(15px - 12 * ((300px - 100vw) / 20));
+        }
+        @media (max-width: 280px) {
+            padding-inline: 3px;
+        }
     }
 
     &__main {
         padding: 31px 0 55px;
 
         display: flex;
-        gap: 5px 20px;
+        gap: 10px 20px;
 
         justify-content: space-between;
         align-items: center;
@@ -30,6 +37,14 @@
         @media (max-width: $headerTransformBreakpoint+px) {
             flex-wrap: wrap;
         }
+    }
+
+    &__search-container {
+        @media (max-width: $headerTransformBreakpoint+px) {
+            flex: 1 1 100%;
+            order: 3;
+        }
+
     }
 
     &__button-search {
@@ -48,12 +63,20 @@
 
         justify-content: center;
 
-        @media (max-width: $headerTransformBreakpoint+px) {
+        @media (max-width: $burgerBreakpoint+px) {
             position: static;
             transform: unset;
 
+            justify-content: unset;
+
             order: -1;
-            flex: 1 1 100%;
+            flex-grow: 1;
+        }
+        @media (max-width: $headerTransformBreakpoint+px) {
+            //flex-basis: 100%;
+        }
+        @media (max-width: 250px) {
+            flex-shrink: 1;
         }
     }
 
