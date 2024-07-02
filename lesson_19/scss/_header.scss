@@ -1,4 +1,3 @@
-@import "common_elements/logo";
 @import "variables";
 @import "common_elements/burger";
 
@@ -26,25 +25,39 @@
         justify-content: space-between;
         align-items: center;
 
-        @media (max-width: 800px){
-            padding-top: calc(31px - 21 * ((800px - 100vw) / 300));
-            padding-bottom: calc(55px - 40 * ((800px - 100vw) / 300));
+        @media (max-width: 1190px){
+            padding-top: calc(31px - 21 * ((1190px - 100vw) / 490));
+            padding-bottom: calc(55px - 40 * ((1190px - 100vw) / 490));
         }
-        @media (max-width: 500px) {
+        @media (max-width: 700px) {
             padding-top: 10px;
             padding-bottom: 15px;
         }
-        @media (max-width: $headerTransformBreakpoint+px) {
+        @media (max-width: $burgerBreakpoint+px) {
             flex-wrap: wrap;
         }
     }
 
-    &__search-container {
-        @media (max-width: $headerTransformBreakpoint+px) {
-            flex: 1 1 100%;
+    &__search-form {
+        display: flex;
+        flex: 1 1 100%;
+        column-gap: 10px;
+        @media (max-width: $burgerBreakpoint+px) {
             order: 3;
         }
+    }
 
+    &__input-search {
+        display: none;
+
+        flex-grow: 1;
+
+        background-color: #fff;
+        box-shadow: 0px 0px 52px -26px rgba(0,0,0,0.75);
+
+        @media (max-width: $burgerBreakpoint+px) {
+            display: block;
+        }
     }
 
     &__button-search {
@@ -71,9 +84,6 @@
 
             order: -1;
             flex-grow: 1;
-        }
-        @media (max-width: $headerTransformBreakpoint+px) {
-            //flex-basis: 100%;
         }
         @media (max-width: 250px) {
             flex-shrink: 1;
@@ -121,8 +131,8 @@
 
 .logo {
     &__img {
-        height: 23px;
-        width: 97px;
+        height: 34px;
+        width: 180px;
     }
 }
 
