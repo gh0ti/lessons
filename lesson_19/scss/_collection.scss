@@ -1,0 +1,85 @@
+@import "variables";
+@import "mixins";
+
+.collections {
+    font-family: "Roboto", sans-serif;
+
+    @media (max-width: $containerWidth+px) {
+        font-size: calc(16px - 8 * ((#{$containerWidth}px - 100vw) / 500));
+    }
+    @media (max-width: 800px) {
+        font-size: 8px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__section-left {
+        flex-grow: 1;
+
+        & > * {
+            //margin-bottom: toEm(52);
+            margin-bottom: 52px;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        font-size: toEm(74);
+        font-weight: 300;
+    }
+
+    &__description {
+        margin-bottom: toEm(66, 30);
+
+        font-size: toEm(30);
+        line-height: toEm(55, 30);
+        text-transform: capitalize;
+    }
+
+    &__link {
+        padding: 21px 26px;
+
+        background-color: $black;
+
+        color: $white;
+
+        font-size: 29px;
+        text-transform: capitalize;
+
+        &--shop-icon {
+            &::before {
+                margin-right: 8px;
+                content: "\e903";
+            }
+        }
+    }
+
+    &__section-right {
+        padding: 101px 94px 60px 116px;
+    }
+
+    @mixin image-border {
+        border-top-left-radius: 130px;
+        border-bottom-right-radius: 130px;
+    }
+
+    &__image-wrapper {
+        border: 2px solid rgba($dark, .25);
+        @include image-border;
+    }
+
+    &__main-image {
+        width: 424px;
+        height: 542px;
+
+        @include image-border;
+
+        transform: translate(-18px, -18px);
+    }
+}

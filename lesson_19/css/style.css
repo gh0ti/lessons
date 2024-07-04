@@ -80,7 +80,7 @@ textarea {
   font-style: normal;
   font-display: block;
 }
-[class$=-icon], [class*="-icon "] {
+[class$=-icon]::before, [class$=-icon]::after, [class*="-icon "]::before, [class*="-icon "]::after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
@@ -308,5 +308,67 @@ body {
   gap: 10px 15px;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.collections {
+  font-family: "Roboto", sans-serif;
+}
+@media (max-width: 1300px) {
+  .collections {
+    font-size: calc(16px - 8 * (1300px - 100vw) / 500);
+  }
+}
+@media (max-width: 800px) {
+  .collections {
+    font-size: 8px;
+  }
+}
+.collections__container {
+  display: flex;
+  align-items: center;
+}
+.collections__section-left {
+  flex-grow: 1;
+}
+.collections__section-left > * {
+  margin-bottom: 52px;
+}
+.collections__section-left > *:last-child {
+  margin-bottom: 0;
+}
+.collections__header {
+  font-size: 4.625em;
+  font-weight: 300;
+}
+.collections__description {
+  margin-bottom: 2.2em;
+  font-size: 1.875em;
+  line-height: 1.8333333333em;
+  text-transform: capitalize;
+}
+.collections__link {
+  padding: 21px 26px;
+  background-color: #1E2832;
+  color: #FFFFFF;
+  font-size: 29px;
+  text-transform: capitalize;
+}
+.collections__link--shop-icon::before {
+  margin-right: 8px;
+  content: "\e903";
+}
+.collections__section-right {
+  padding: 101px 94px 60px 116px;
+}
+.collections__image-wrapper {
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-top-left-radius: 130px;
+  border-bottom-right-radius: 130px;
+}
+.collections__main-image {
+  width: 424px;
+  height: 542px;
+  border-top-left-radius: 130px;
+  border-bottom-right-radius: 130px;
+  transform: translate(-18px, -18px);
 }
 /*# sourceMappingURL=style.css.map */
