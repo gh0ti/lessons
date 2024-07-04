@@ -2,6 +2,13 @@
 @import "mixins";
 
 .collections {
+    background: url("../img/background/left.svg") left center / auto 18% no-repeat,
+    url("../img/background/right.svg") right center / auto 50% no-repeat;
+
+    @media (max-width: $burgerBreakpoint+px) {
+        background-size: auto 50%, auto 80%;
+    }
+
     font-family: "Roboto", sans-serif;
 
     @media (max-width: $containerWidth+px) {
@@ -19,9 +26,16 @@
     &__section-left {
         flex-grow: 1;
 
+        @media (max-width: $burgerBreakpoint+px) {
+            font-size: 1.2rem;
+        }
+
         & > * {
-            //margin-bottom: toEm(52);
-            margin-bottom: 52px;
+            margin-bottom: toRem(52);
+
+            @media (max-width: $burgerBreakpoint+px) {
+                margin-bottom: toRem(52 * .4);
+            }
         }
 
         & > *:last-child {
@@ -35,21 +49,25 @@
     }
 
     &__description {
-        margin-bottom: toEm(66, 30);
+        margin-bottom: toRem(66);
 
-        font-size: toEm(30);
-        line-height: toEm(55, 30);
+        @media (max-width: $burgerBreakpoint+px) {
+            margin-bottom: toRem(66 * .4);
+        }
+
+        font-size: toRem(30);
+        line-height: toRem(55);
         text-transform: capitalize;
     }
 
     &__link {
-        padding: 21px 26px;
+        padding: toRem(21) toRem(26);
 
         background-color: $black;
 
         color: $white;
 
-        font-size: 29px;
+        font-size: toRem(29);
         text-transform: capitalize;
 
         &--shop-icon {
@@ -58,15 +76,27 @@
                 content: "\e903";
             }
         }
+
+        transition: background-color .2s ease-in;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $primary;
+            }
+        }
     }
 
     &__section-right {
-        padding: 101px 94px 60px 116px;
+        padding: toRem(101) toRem(94) toRem(60) toRem(116);
+
+        @media (max-width: $burgerBreakpoint+px) {
+            display: none;
+        }
     }
 
     @mixin image-border {
-        border-top-left-radius: 130px;
-        border-bottom-right-radius: 130px;
+        border-top-left-radius: toRem(130);
+        border-bottom-right-radius: toRem(130);
     }
 
     &__image-wrapper {
@@ -75,11 +105,11 @@
     }
 
     &__main-image {
-        width: 424px;
-        height: 542px;
+        width: toRem(424);
+        height: toRem(542);
 
         @include image-border;
 
-        transform: translate(-18px, -18px);
+        transform: translate(toRem(-18), toRem(-18));
     }
 }

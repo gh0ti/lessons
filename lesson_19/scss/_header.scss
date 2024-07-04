@@ -84,7 +84,6 @@
             justify-content: unset;
 
             order: -1;
-            //flex-grow: 1;
         }
         @media (max-width: 250px) {
             flex-shrink: 1;
@@ -106,6 +105,16 @@
         display: flex;
         align-items: center;
         gap: 8px;
+    }
+
+    &__link, &__burger {
+        transition: color .2s ease-in;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+
+        }
     }
 
     &__text-link {
@@ -164,5 +173,14 @@
     }
 
     &__item {
+    }
+
+    &__link {
+        transition: color .2s ease-in;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $primary;
+            }
+        }
     }
 }
