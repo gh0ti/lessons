@@ -27,9 +27,11 @@ html {
 }
 
 body {
-    background-color: rgba($black, .05);
+
 }
 
 @import "header";
 
 @import "collection";
+
+@import "brands";

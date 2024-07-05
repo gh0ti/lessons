@@ -2,8 +2,12 @@
 @import "mixins";
 
 .collections {
-    background: url("../img/background/left.svg") left center / auto 18% no-repeat,
-    url("../img/background/right.svg") right center / auto 50% no-repeat;
+    background-color: rgba($black, .05);
+    background-image:     url("../img/background/left.svg"), url("../img/background/right.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 18%, right 50%;
+    // довелось розкласти властивість background на складові, бо короткий запис, як нижче, не працював
+    //background: rgba($black, .5) url("../img/background/left.svg") url("../img/background/right.svg") no-repeat no-repeat left 18% right 50%;
 
     @media (max-width: $burgerBreakpoint+px) {
         background-size: auto 50%, auto 80%;

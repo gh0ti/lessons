@@ -1,0 +1,43 @@
+@import "mixins";
+@import "variables";
+
+.brands {
+    padding-block: 90px;
+
+    @media (max-width: $containerWidth+px) {
+        padding-block: calc(90px - 80 * ((#{$containerWidth}px - 100vw) / 800));
+    }
+    @media (max-width: 500px) {
+        padding-block: 10px;
+    }
+
+    &__container {
+    }
+
+    &__list {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        column-gap: toRem(50);
+        row-gap: 10px;
+    }
+
+    &__item {
+        transition: all .2s ease-in;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__link {
+    }
+
+    &__image-link {
+        height: toRem(70);
+        width: toRem(200);
+    }
+}
