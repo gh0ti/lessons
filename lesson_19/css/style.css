@@ -128,6 +128,32 @@ textarea {
   padding: 0 15px;
 }
 
+.ribbons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.ribbon {
+  padding: 4px 12px;
+}
+.ribbon--sale {
+  background-color: #1E2832;
+}
+.ribbon--sale::before {
+  content: "SALE";
+}
+.ribbon--hot {
+  background-color: #FF6F61;
+}
+.ribbon--hot::before {
+  content: "HOT";
+}
+
 .burger {
   display: none;
   height: 18px;
@@ -461,5 +487,81 @@ textarea {
 .brands__image-link {
   height: 4.375rem;
   width: 12.5rem;
+}
+
+.popular__container {
+  position: relative;
+  margin-bottom: 140px;
+}
+.popular__title {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%) rotate(-90deg) translateY(-0.8rem);
+  font-family: "Roboto", sans-serif;
+  font-size: 2.125rem;
+  text-transform: uppercase;
+}
+@media (max-width: 1430px) {
+  .popular__title {
+    margin-bottom: 1.25rem;
+    position: static;
+    transform: unset;
+  }
+}
+.popular__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 810px) {
+  .popular__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 570px) {
+  .popular__list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 410px) {
+  .popular__list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+.popular__item {
+  position: relative;
+  overflow: hidden;
+}
+.popular__item:nth-child(5n+1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+@media (max-width: 655px) {
+  .popular__item:nth-child(5n+1) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+.popular__ribbons {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  z-index: 2;
+}
+.popular__link {
+  display: block;
+}
+@media (any-hover: hover) {
+  .popular__link:hover img {
+    transform: scale(1.1);
+  }
+}
+.popular__image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  transition: all 0.1s ease-in;
 }
 /*# sourceMappingURL=style.css.map */

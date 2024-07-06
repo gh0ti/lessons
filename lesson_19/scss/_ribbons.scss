@@ -1,0 +1,31 @@
+@import "variables";
+
+.ribbons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: $white;
+}
+
+.ribbon {
+    padding: 4px 12px;
+
+    &--sale {
+        background-color: $black;
+
+        &::before {
+            content: "SALE";
+        }
+    }
+    &--hot {
+        background-color: $primary;
+
+        &::before {
+            content: "HOT";
+        }
+    }
+}
