@@ -106,11 +106,10 @@
 
 .product-list {
     display: grid;
-    //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: mixins.toRem(24);
 
-    align-items: start;
+    align-items: stretch;
 
     @media (max-width: 545px) {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -122,9 +121,11 @@
 
 .product {
     max-width: 312px;
+
     display: flex;
     flex-direction: column;
     justify-content: start;
+    row-gap: 18px;
 
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -138,9 +139,6 @@
     }
 
     &__picture {
-        margin-bottom: 18px;
-
-        height: 100%;
         width: 100%;
         aspect-ratio: 312 / 400;
         object-fit: contain;
@@ -152,6 +150,10 @@
         display: flex;
         flex-direction: column;
 
+        flex-grow: 1;
+
+        row-gap: mixins.toRem(16);
+
         @media (max-width: 340px) {
             font-size: calc(1em - .5em * ((340px - 100vw) / 140));
         }
@@ -159,7 +161,7 @@
     }
 
     &__title {
-        margin-bottom: mixins.toRem(16);
+        //margin-bottom: mixins.toRem(16);
 
         flex-grow: 1;
 

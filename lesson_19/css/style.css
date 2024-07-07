@@ -109,7 +109,7 @@ textarea {
 
 @media (max-width: 1300px) {
   html {
-    font-size: calc(16px - 8 * (1300px - 100vw) / 500);
+    font-size: calc(16px - 8 * (1320px - 100vw) / 500);
   }
 }
 @media (max-width: 800px) {
@@ -124,7 +124,7 @@ textarea {
 }
 
 [class*=__container] {
-  max-width: 1330px;
+  max-width: 1350px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -373,9 +373,9 @@ textarea {
     background-size: auto 50%, auto 80%;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1320px) {
   .collections {
-    font-size: calc(16px - 8 * (1300px - 100vw) / 500);
+    font-size: calc(16px - 8 * (1320px - 100vw) / 500);
   }
 }
 @media (max-width: 800px) {
@@ -463,9 +463,9 @@ textarea {
 .brands {
   padding-block: 90px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1320px) {
   .brands {
-    padding-block: calc(90px - 80 * (1300px - 100vw) / 800);
+    padding-block: calc(90px - 80 * (1320px - 100vw) / 800);
   }
 }
 @media (max-width: 500px) {
@@ -647,7 +647,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 @media (max-width: 545px) {
   .product-list {
@@ -659,6 +659,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  row-gap: 18px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   transition: transform 0.1s ease-in;
@@ -669,8 +670,6 @@ textarea {
   }
 }
 .product__picture {
-  margin-bottom: 18px;
-  height: 100%;
   width: 100%;
   aspect-ratio: 312/400;
   object-fit: contain;
@@ -679,6 +678,8 @@ textarea {
   padding-inline: 0.625rem;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  row-gap: 1rem;
 }
 @media (max-width: 340px) {
   .product__details {
@@ -686,7 +687,6 @@ textarea {
   }
 }
 .product__title {
-  margin-bottom: 1rem;
   flex-grow: 1;
   font-weight: 600;
   text-transform: capitalize;
