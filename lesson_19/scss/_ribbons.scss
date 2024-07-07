@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .ribbons {
     display: flex;
@@ -8,21 +8,21 @@
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     font-weight: 600;
-    color: $white;
+    color: variables.$white;
 }
 
 .ribbon {
     padding: 4px 12px;
 
     &--sale {
-        background-color: $black;
+        background-color: variables.$black;
 
         &::before {
             content: "SALE";
         }
     }
     &--hot {
-        background-color: $primary;
+        background-color: variables.$primary;
 
         &::before {
             content: "HOT";

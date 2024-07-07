@@ -23,6 +23,8 @@
     }
 
     &__container {
+        padding-bottom: toRem(60);
+
         display: flex;
         align-items: center;
     }
@@ -91,7 +93,7 @@
     }
 
     &__section-right {
-        padding: toRem(101) toRem(94) toRem(60) toRem(116);
+        padding: toRem(101) toRem(94) 0 toRem(116);
 
         @media (max-width: $burgerBreakpoint+px) {
             display: none;

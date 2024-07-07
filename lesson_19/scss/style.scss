@@ -1,14 +1,14 @@
+@use "mixins";
+@use "variables";
+
 @import "reset";
 
 @import "fonts";
 @import "common_elements/icon-fonts";
 
-@import "mixins";
-@import "variables";
-
 html {
     @media (max-width: 1300px) {
-        font-size: calc(16px - 8 * ((#{$containerWidth}px - 100vw) / 500));
+        font-size: calc(16px - 8 * ((#{variables.$containerWidth}px - 100vw) / 500));
     }
     @media (max-width: 800px) {
         font-size: 8px;
@@ -21,7 +21,7 @@ html {
 }
 
 [class*=__container] {
-    max-width: $pageWidth + px;
+    max-width: variables.$pageWidth + px;
     margin: 0 auto;
     padding: 0 15px;
 }

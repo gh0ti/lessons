@@ -63,6 +63,7 @@ button,
 select,
 option {
   cursor: pointer;
+  background-color: unset;
 }
 
 input[type=text],
@@ -383,6 +384,7 @@ textarea {
   }
 }
 .collections__container {
+  padding-bottom: 3.75rem;
   display: flex;
   align-items: center;
 }
@@ -438,7 +440,7 @@ textarea {
   }
 }
 .collections__section-right {
-  padding: 6.3125rem 5.875rem 3.75rem 7.25rem;
+  padding: 6.3125rem 5.875rem 0 7.25rem;
 }
 @media (max-width: 480px) {
   .collections__section-right {
@@ -491,7 +493,12 @@ textarea {
 
 .popular__container {
   position: relative;
-  margin-bottom: 140px;
+  margin-bottom: 8.75rem;
+}
+@media (max-width: 800px) {
+  .popular__container {
+    margin-bottom: 30px;
+  }
 }
 .popular__title {
   position: absolute;
@@ -563,5 +570,152 @@ textarea {
   aspect-ratio: 1/1;
   object-fit: contain;
   transition: all 0.1s ease-in;
+}
+
+.subscribe {
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+}
+.subscribe__title {
+  margin-bottom: 35px;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.125rem;
+  font-weight: 500;
+  text-align: center;
+}
+.filter {
+  margin-bottom: 2.1875rem;
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  font-size: 16px;
+}
+@media (max-width: 450px) {
+  .filter {
+    font-size: calc(16px - 6 * (450px - 100vw) / 50);
+  }
+}
+@media (max-width: 400px) {
+  .filter {
+    font-size: 10px;
+  }
+}
+.filter__items {
+  display: flex;
+  column-gap: 2.5rem;
+  flex-grow: 1;
+}
+@media (max-width: 355px) {
+  .filter__items {
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: start;
+  }
+}
+.filter__item--active {
+  font-weight: 600;
+}
+.filter__link-item {
+  text-transform: capitalize;
+  transition: color 0.1s ease-in;
+}
+@media (any-hover: hover) {
+  .filter__link-item:hover {
+    color: #FF6F61;
+  }
+}
+.filter-button {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  transition: background-color 0.2s ease-in;
+  padding: 5px 15px;
+  background-color: #1E2832;
+  color: #FFFFFF;
+}
+@media (any-hover: hover) {
+  .filter-button:hover {
+    background-color: #FF6F61;
+  }
+}
+.filter-button--filter-icon::before {
+  margin-right: 4px;
+  content: "\e902";
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+@media (max-width: 545px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.product {
+  max-width: 312px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  transition: transform 0.1s ease-in;
+}
+@media (any-hover: hover) {
+  .product:hover {
+    transform: scale(1.02);
+  }
+}
+.product__picture {
+  margin-bottom: 18px;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 312/400;
+  object-fit: contain;
+}
+.product__details {
+  padding-inline: 0.625rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 340px) {
+  .product__details {
+    font-size: calc(1em - 0.5em * (340px - 100vw) / 140);
+  }
+}
+.product__title {
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: color 0.1s ease-in;
+}
+@media (any-hover: hover) {
+  .product__title:hover {
+    color: #FF6F61;
+  }
+}
+.product__bottom-section {
+  display: flex;
+}
+.product__category {
+  flex-grow: 1;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
+}
+.product__prices {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 0.75rem;
+  font-weight: 600;
+}
+.product__price--discount {
+  color: #FF6F61;
+}
+.product__price--discount + .product__price--regular {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=style.css.map */

@@ -5,7 +5,10 @@
     &__container {
         position: relative;
 
-        margin-bottom: 140px;
+        margin-bottom: toRem(140);
+        @media (max-width: 800px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__title {
