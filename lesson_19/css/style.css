@@ -718,4 +718,53 @@ textarea {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: line-through;
 }
+
+.promo {
+  background: #1E2832 url("../img/promo/background.png") left top/cover no-repeat;
+  overflow: hidden;
+  font-size: 16px;
+}
+@media (max-width: 1320px) {
+  .promo {
+    font-size: calc(16px - 12 * (1320px - 100vw) / 1000);
+  }
+}
+@media (max-width: 300px) {
+  .promo {
+    font-size: 4px;
+  }
+}
+.promo__container {
+  padding: 233px 33px 200px 783px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.4375rem;
+  align-items: start;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+.promo__title-container {
+  position: relative;
+}
+.promo__title {
+  width: 11.9375rem;
+}
+.promo__shadow-title {
+  width: 45.75rem;
+  position: absolute;
+  top: -11.375rem;
+  left: 10.0625rem;
+  opacity: 0.1;
+}
+.promo__description {
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+}
+.promo__link {
+  padding: 19px 26px;
+  background-color: #FFFFFF;
+  font-size: 26px;
+  color: #1E2832;
+}
 /*# sourceMappingURL=style.css.map */
