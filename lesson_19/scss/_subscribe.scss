@@ -7,6 +7,7 @@
     text-transform: capitalize;
 
     &__container {
+        margin-bottom: mixins.toRem(140);
     }
 
     &__title {
@@ -127,6 +128,8 @@
     justify-content: start;
     row-gap: 18px;
 
+    position: relative;
+
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
 
@@ -157,14 +160,9 @@
         @media (max-width: 340px) {
             font-size: calc(1em - .5em * ((340px - 100vw) / 140));
         }
-
     }
 
     &__title {
-        //margin-bottom: mixins.toRem(16);
-
-        flex-grow: 1;
-
         font-weight: 600;
 
         text-transform: capitalize;

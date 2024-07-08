@@ -576,6 +576,9 @@ textarea {
   font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
 }
+.subscribe__container {
+  margin-bottom: 8.75rem;
+}
 .subscribe__title {
   margin-bottom: 35px;
   font-family: "Roboto", sans-serif;
@@ -660,6 +663,7 @@ textarea {
   flex-direction: column;
   justify-content: start;
   row-gap: 18px;
+  position: relative;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   transition: transform 0.1s ease-in;
@@ -687,7 +691,6 @@ textarea {
   }
 }
 .product__title {
-  flex-grow: 1;
   font-weight: 600;
   text-transform: capitalize;
   transition: color 0.1s ease-in;
@@ -720,7 +723,7 @@ textarea {
 }
 
 .promo {
-  background: #1E2832 url("../img/promo/background.png") left top/cover no-repeat;
+  background: #1E2832 url("../img/promo/background.png") 30% top/cover no-repeat;
   overflow: hidden;
   font-size: 16px;
 }
@@ -735,11 +738,17 @@ textarea {
   }
 }
 .promo__container {
-  padding: 233px 33px 200px 783px;
+  margin-bottom: 8.75rem;
+  display: flex;
+  justify-content: end;
+}
+.promo__wrapper {
+  padding: 14.5625em 2.0625rem 12.5em;
   display: flex;
   flex-direction: column;
   row-gap: 3.4375rem;
   align-items: start;
+  flex-basis: 510px;
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
   text-transform: capitalize;
@@ -762,9 +771,17 @@ textarea {
   line-height: 2.5rem;
 }
 .promo__link {
-  padding: 19px 26px;
+  padding: 1.1875rem 1.625rem;
   background-color: #FFFFFF;
-  font-size: 26px;
+  font-size: 1.625rem;
   color: #1E2832;
+}
+@media (any-hover: hover) {
+  .promo__link {
+    transition: background-color 0.1s ease-in;
+  }
+  .promo__link:hover {
+    background-color: #FF6F61;
+  }
 }
 /*# sourceMappingURL=style.css.map */
