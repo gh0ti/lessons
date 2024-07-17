@@ -2,7 +2,6 @@
 @use "mixins";
 
 .promo {
-
     background: variables.$black url("../img/promo/background.png") 30% top / cover no-repeat;
 
     overflow: hidden;
@@ -16,15 +15,17 @@
         font-size: 4px;
     }
 
-    &__container {
+    &--margin {
         margin-bottom: mixins.toRem(140);
+    }
 
+    &__container {
         display: flex;
         justify-content: end;
     }
 
     &__wrapper {
-        padding: mixins.toEm(233) mixins.toRem(33) mixins.toEm(200);
+        padding: mixins.toEm(233) mixins.toRem(33) mixins.toEm(93);
 
         display: flex;
         flex-direction: column;

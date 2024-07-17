@@ -30,8 +30,14 @@ body {
 
 }
 
+// common elements
+@import "common_elements/filter";
+
+@import "common_elements/product-list";
+
 @import "ribbons";
 
+// sections
 @import "header";
 
 @import "collection";
@@ -43,3 +49,5 @@ body {
 @import "subscribe";
 
 @import "promo";
+
+@import "best-sellers";

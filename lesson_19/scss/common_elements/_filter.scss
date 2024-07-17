@@ -1,0 +1,82 @@
+@use "../variables";
+@use "../mixins";
+
+.filter {
+    display: flex;
+    column-gap: 30px;
+
+    align-items: center;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+
+    @media (max-width: variables.$filterBreakpoint+px) {
+        font-size: calc(16px - 6 * ((#{variables.$filterBreakpoint }px - 100vw) / 50));
+    }
+    @media (max-width: 400px) {
+        font-size: 10px;
+    }
+
+
+    &__items {
+        display: flex;
+        column-gap: mixins.toRem(40);
+
+        flex-grow: 1;
+
+        @media (max-width: 355px) {
+            flex-direction: column;
+            row-gap: 5px;
+            align-items: start;
+        }
+    }
+
+    &__item {
+        &--active {
+            font-weight: 600;
+        }
+    }
+
+    &__link-item {
+        text-transform: capitalize;
+
+        transition: color .1s ease-in;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: variables.$primary;
+            }
+        }
+    }
+
+    &__filter-button {
+    }
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+
+    font-size: 1em;
+
+    transition: background-color .2s ease-in;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: variables.$primary;
+        }
+    }
+
+    &--filter-icon {
+        &::before {
+            margin-right: 4px;
+            content: "\e902";
+        }
+    }
+
+    padding: 5px 15px;
+
+    background-color: variables.$black;
+
+    color: variables.$white;
+}
