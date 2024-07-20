@@ -1,0 +1,118 @@
+@use "variables";
+@use "mixins";
+
+$formSafetyPaddings: mixins.toRem(20);
+$formMaxWidth: calc(760px + $formSafetyPaddings);
+
+.follow {
+    margin-bottom: mixins.toRem(100);
+
+    background-color: rgba(variables.$black, .05);
+
+    font-family: "Roboto", sans-serif;
+
+    &__container {
+        padding-block: mixins.toRem(100);
+
+        & > * {
+            margin-bottom: mixins.toRem(60);
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: mixins.toRem(65);
+
+        font-size: mixins.toRem(50);
+        font-weight: 500;
+
+        text-align: center;
+    }
+
+    &__items {
+        margin-bottom: mixins.toRem(70);
+
+        display: flex;
+        gap: mixins.toRem(24);
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        overflow: hidden;
+    }
+
+    &__link-item {
+
+    }
+
+    &__picture {
+        height: mixins.toRem(200);
+        width: mixins.toRem(200);
+
+        transition: transform .1s ease-in;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__form {
+        max-width: $formMaxWidth;
+
+        margin: 0 auto;
+        padding-inline: $formSafetyPaddings;
+
+        display: flex;
+        justify-content: center;
+
+        column-gap: mixins.toRem(26);
+        row-gap: mixins.toRem(13);
+
+        font-size: mixins.toRem(16);
+
+        @media (max-width: 300px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__input {
+        padding: 0 mixins.toRem(15) mixins.toRem(13);
+
+        border-bottom: 2px solid variables.$dark;
+
+        flex-grow: 1;
+
+        font-weight: 600;
+
+        outline: none;
+
+        transition: border-color .15s ease-in;
+
+        &::placeholder {
+            color: rgba(variables.$black, .5);
+        }
+
+        &:focus {
+            border-color: variables.$primary;
+        }
+    }
+
+    &__submit {
+        padding: 0 mixins.toRem(15) mixins.toRem(13);
+
+        border-bottom: 2px solid variables.$dark;
+
+        font-family: "Open Sans", sans-serif;
+        font-size: mixins.toRem(16);
+
+        text-transform: uppercase;
+    }
+
+}

@@ -805,4 +805,80 @@ textarea {
   font-size: 3.125rem;
   font-weight: 500;
 }
+.follow {
+  margin-bottom: 6.25rem;
+  background-color: rgba(30, 40, 50, 0.05);
+  font-family: "Roboto", sans-serif;
+}
+.follow__container {
+  padding-block: 6.25rem;
+}
+.follow__container > * {
+  margin-bottom: 3.75rem;
+}
+.follow__container > *:last-child {
+  margin-bottom: 0;
+}
+.follow__title {
+  margin-bottom: 4.0625rem;
+  font-size: 3.125rem;
+  font-weight: 500;
+  text-align: center;
+}
+.follow__items {
+  margin-bottom: 4.375rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.follow__item {
+  overflow: hidden;
+}
+.follow__picture {
+  height: 12.5rem;
+  width: 12.5rem;
+  transition: transform 0.1s ease-in;
+}
+@media (any-hover: hover) {
+  .follow__picture:hover {
+    transform: scale(1.1);
+  }
+}
+.follow__form {
+  max-width: calc(760px + 1.25rem);
+  margin: 0 auto;
+  padding-inline: 1.25rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 1.625rem;
+  row-gap: 0.8125rem;
+  font-size: 1rem;
+}
+@media (max-width: 300px) {
+  .follow__form {
+    flex-wrap: wrap;
+  }
+}
+.follow__input {
+  padding: 0 0.9375rem 0.8125rem;
+  border-bottom: 2px solid #000000;
+  flex-grow: 1;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 0.15s ease-in;
+}
+.follow__input::placeholder {
+  color: rgba(30, 40, 50, 0.5);
+}
+.follow__input:focus {
+  border-color: #FF6F61;
+}
+.follow__submit {
+  padding: 0 0.9375rem 0.8125rem;
+  border-bottom: 2px solid #000000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=style.css.map */

@@ -19,17 +19,17 @@
 
         transform: translateY(-50%) translateX(-50%) rotate(-90deg) translateY(-.8rem);
 
+        font-family: "Roboto", sans-serif;
+        font-size: toRem(34);
+
+        text-transform: uppercase;
+
         @media (max-width: 1430px) {
             margin-bottom: toRem(20);
 
             position: static;
             transform: unset;
         }
-
-        font-family: "Roboto", sans-serif;
-        font-size: toRem(34);
-
-        text-transform: uppercase;
     }
 
     &__list {
