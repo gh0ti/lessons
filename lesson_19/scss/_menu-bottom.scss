@@ -1,0 +1,132 @@
+@use "variables";
+@use "mixins";
+
+.menu-bottom {
+    &__container {
+        padding-top: mixins.toRem(140);
+        padding-bottom: mixins.toRem(90);
+
+        display: grid;
+
+        column-gap: mixins.toRem(24);
+        row-gap: 24px;
+
+        grid-template-columns: 4fr 3fr 3fr 2fr;
+
+        @media (max-width: 920px) {
+            padding-top: mixins.toRem(30);
+            padding-bottom: mixins.toRem(30);
+
+            grid-template-columns: 3fr 3fr 2fr;
+        }
+
+        @media (max-width: 320px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__main {
+        @media (max-width: 920px) {
+            max-width: mixins.toRem(420);
+
+            grid-column: span 3;
+        }
+
+        @media (max-width: 320px) {
+            grid-column: unset;
+        }
+
+        & > *:not(:last-child) {
+            margin-bottom: mixins.toRem(32);
+        }
+    }
+
+    &__logo {
+
+    }
+
+    &__description {
+    }
+
+    &__social-links {
+    }
+
+    &__catalog {
+    }
+}
+
+.logo {
+    &__img {
+    }
+}
+
+.social_links {
+    &__item {
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: mixins.toRem(36);
+
+    flex-wrap: wrap;
+
+    &__link {
+    }
+
+    &__text {
+        font-size: mixins.toRem(25);
+
+        &--facebook-icon {
+            &::before {
+                content: "\e907";
+            }
+        }
+
+        &--twitter-icon {
+            &::before {
+                content: "\e906";
+            }
+        }
+
+        &--linkedin-icon {
+            &::before {
+                content: "\e905";
+            }
+        }
+
+        &--instagram-icon {
+            &::before {
+                content: "\e904";
+            }
+        }
+    }
+}
+
+.links-menu {
+    font-family: "Open Sans", sans-serif;
+    font-size: mixins.toRem(16);
+
+    &__title {
+        margin-bottom: mixins.toRem(22);
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: mixins.toRem(12);
+
+    }
+
+    &__item-list {
+        font-size: mixins.toRem(14);
+    }
+
+    &__item-link {
+        text-transform: capitalize;
+    }
+}
