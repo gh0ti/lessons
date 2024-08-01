@@ -1,0 +1,74 @@
+@use "variables";
+@use "mixins";
+
+@mixin font-definition {
+    color: variables.$white;
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer {
+    padding-block: mixins.toRem(14);
+
+    background-color: variables.$black;
+
+    @include font-definition;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: mixins.toRem(8);
+
+        & > *:last-child {
+            justify-self: end;
+        }
+        & > *:first-child {
+            justify-self: start;
+        }
+    }
+
+    &__copyright {
+    }
+
+    &__payment-systems {
+        display: flex;
+        justify-content: center;
+        gap: mixins.toRem(6);
+        flex-wrap: wrap;
+    }
+
+    &__item-payment-systems {
+    }
+
+    &__link-payment-systems {
+    }
+
+    &__img-payment-systems {
+        width: mixins.toRem(42);
+        height: mixins.toRem(24);
+    }
+
+    &__scroll-to-top {
+        display: flex;
+        align-items: center;
+
+        @include font-definition;
+        font-size: mixins.toRem(16);
+
+        transition: color .2s ease-in;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: variables.$primary;
+            }
+        }
+
+        &--icon {
+            &::after {
+                font-size: mixins.toRem(20);
+                content: "\e908";
+            }
+        }
+    }
+}

@@ -45,7 +45,18 @@ $formMaxWidth: calc(760px + $formSafetyPaddings);
     }
 
     &__link-item {
+        position: relative;
+    }
 
+    &__overlay-picture {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+
+        background-color: rgba(variables.$black, .5);
+
+        font-size: 70px;
     }
 
     &__picture {
