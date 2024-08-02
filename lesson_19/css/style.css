@@ -840,9 +840,23 @@ textarea {
 .follow__overlay-picture {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   background-color: rgba(30, 40, 50, 0.5);
-  font-size: 70px;
+  opacity: 0;
+  transition: all 0.15s ease-in;
+}
+.follow__overlay-picture .social-links__text--overlay {
+  color: #FFFFFF;
+  font-size: 4.375rem;
+  transition: all 0.15s ease-in;
+}
+@media (any-hover: hover) {
+  .follow__overlay-picture:hover {
+    opacity: 1;
+  }
 }
 .follow__picture {
   height: 12.5rem;
@@ -889,6 +903,13 @@ textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
+  transition: all 0.15s ease-in;
+}
+@media (any-hover: hover) {
+  .follow__submit:hover {
+    border-color: #FF6F61;
+    color: #FF6F61;
+  }
 }
 
 .menu-bottom__container {
@@ -931,6 +952,14 @@ textarea {
   flex-wrap: wrap;
   color: #1E2832;
 }
+.social-links__link {
+  transition: color 0.1s ease-in;
+}
+@media (any-hover: hover) {
+  .social-links__link:hover {
+    color: #FF6F61;
+  }
+}
 .social-links__text {
   font-size: 1.5625rem;
 }
@@ -966,6 +995,12 @@ textarea {
 }
 .links-menu__item-link {
   text-transform: capitalize;
+  transition: color 0.1s ease-in;
+}
+@media (any-hover: hover) {
+  .links-menu__item-link:hover {
+    color: #FF6F61;
+  }
 }
 
 .footer {

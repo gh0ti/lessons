@@ -60,11 +60,6 @@
     }
 }
 
-.social_links {
-    &__item {
-    }
-}
-
 .social-links {
     display: flex;
     gap: mixins.toRem(36);
@@ -73,7 +68,17 @@
 
     color: variables.$black;
 
+    &__item {
+    }
+
     &__link {
+        transition: color .1s ease-in;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: variables.$primary;
+            }
+        }
     }
 
     &__text {
@@ -130,5 +135,13 @@
 
     &__item-link {
         text-transform: capitalize;
+
+        transition: color .1s ease-in;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: variables.$primary;
+            }
+        }
     }
 }
