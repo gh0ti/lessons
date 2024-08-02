@@ -850,7 +850,8 @@ textarea {
 }
 .follow__overlay-picture .social-links__text--overlay {
   position: relative;
-  top: 100%;
+  top: 10%;
+  opacity: 0;
   color: #FFFFFF;
   font-size: 4.375rem;
   transition: all 0.15s ease-in;
@@ -861,6 +862,7 @@ textarea {
   }
   .follow__overlay-picture:hover .social-links__text--overlay {
     top: 0;
+    opacity: 1;
   }
 }
 .follow__picture {
