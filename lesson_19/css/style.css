@@ -849,6 +849,8 @@ textarea {
   transition: all 0.15s ease-in;
 }
 .follow__overlay-picture .social-links__text--overlay {
+  position: relative;
+  top: 100%;
   color: #FFFFFF;
   font-size: 4.375rem;
   transition: all 0.15s ease-in;
@@ -856,6 +858,9 @@ textarea {
 @media (any-hover: hover) {
   .follow__overlay-picture:hover {
     opacity: 1;
+  }
+  .follow__overlay-picture:hover .social-links__text--overlay {
+    top: 0;
   }
 }
 .follow__picture {

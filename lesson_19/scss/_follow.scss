@@ -65,17 +65,14 @@ $formMaxWidth: calc(760px + $formSafetyPaddings);
         transition: all .15s ease-in;
 
         & .social-links__text--overlay {
+            position: relative;
+            top: 100%;
+
             color: variables.$white;
 
             font-size: mixins.toRem(70);
 
             transition: all .15s ease-in;
-
-            @media (any-hover: hover) {
-                &:hover {
-
-                }
-            }
         }
 
         @media (any-hover: hover) {
@@ -84,7 +81,7 @@ $formMaxWidth: calc(760px + $formSafetyPaddings);
             }
 
             &:hover .social-links__text--overlay {
-                //opacity: 1;
+                top: 0;
             }
         }
     }
